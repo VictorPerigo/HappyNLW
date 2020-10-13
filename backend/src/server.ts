@@ -1,7 +1,6 @@
 import express from 'express'
 import './database/connection';
 import path from 'path'
-const port = 1212
 
 import routes from './routes'
 
@@ -13,4 +12,4 @@ app.use(express.json())
 app.use(routes)
 app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')))
 
-app.listen(port) //localhost:{port}
+app.listen(process.env['PORT']) //localhost:{port}

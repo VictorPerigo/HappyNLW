@@ -4,7 +4,7 @@ export default {
     render(image: Image){
         return {
         id: image.id,
-        url: `http://localhost:1212/uploads/${image.path}`
+        url: `${process.env['HOST']}:${process.env['PORT']}/uploads/${image.path}`
         }
     },
     renderMany(images: Image[]){
