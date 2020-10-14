@@ -28,8 +28,9 @@ export default function CreateOrphanage() {
 
   const [position, setPosition] = useState({latitude: 0, longitude:0})
 
-  function handleManpClick(event: LeafletMouseEvent){
+  function handleMapClick(event: LeafletMouseEvent){
     const {lat, lng} = event.latlng
+    console.log(event.latlng)
     setPosition({
       latitude: lat,
       longitude: lng,
@@ -58,7 +59,8 @@ export default function CreateOrphanage() {
 
     data.append('name', name)
     data.append('about', about)
-    data.append('latitude', String(longitude))
+    console.log(about)
+    data.append('latitude', String(latitude))
     data.append('longitude', String(longitude))
     data.append('instructions', instructions)
     data.append('opening_hours', opening_hours)
@@ -82,10 +84,10 @@ export default function CreateOrphanage() {
             <legend>Dados</legend>
 
             <Map
-              center={[-27.2092052,-49.6401092]} 
+              center={[-16.3342454,-48.9431261]} 
               style={{ width: '100%', height: 280 }}
-              zoom={15}
-              onclick={handleManpClick}
+              zoom={10}
+              onclick={handleMapClick}
             >
               <TileLayer
                 url={`https://a.tile.openstreetmap.org/{z}/{x}/{y}.png`}

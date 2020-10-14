@@ -92,8 +92,8 @@ export default function Orphanage() {
 
             <hr />
 
-            <h2>{orphanage.instructions}</h2>
-            <p>Venha como se sentir mais à vontade e traga muito amor para dar.</p>
+            <h2>instruções para visita</h2>
+            <p>{orphanage.instructions}</p>
 
             <div className="open-details">
               <div className="hour">

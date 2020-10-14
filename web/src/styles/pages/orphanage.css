@@ -30,6 +30,8 @@
   column-gap: 16px;
 
   margin: 16px 40px 0;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #B3DAE2;
 }
  
 .orphanage-details .images button {
