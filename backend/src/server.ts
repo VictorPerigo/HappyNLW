@@ -7,8 +7,6 @@ import cors from 'cors'
 
 import routes from './routes'
 
-import Orphanage from './models/Orphanage'
-
 const app = express()
 
 app.use(cors())
